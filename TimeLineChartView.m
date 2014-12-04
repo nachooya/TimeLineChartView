@@ -92,7 +92,7 @@ static char kTimeLineEventKey;
     
     [self addSubview:label];
     
-    objc_setAssociatedObject (self, &kTimeLineEventKey, event, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject (label, &kTimeLineEventKey, event, OBJC_ASSOCIATION_RETAIN);
 
 }
 
@@ -100,7 +100,7 @@ static char kTimeLineEventKey;
     
     UILabel* label = (UILabel*)sender.view;
     
-    TimeLineEvent* event = objc_getAssociatedObject (self, &kTimeLineEventKey);
+    TimeLineEvent* event = objc_getAssociatedObject (label, &kTimeLineEventKey);
     
     UIAlertView *toast = [[UIAlertView alloc] initWithTitle:label.text
                                                     message:[NSString stringWithFormat:@"%@: %.2fs - %.2fs\nDuration: %.2f seconds", labelName.text, event.start, event.end, (event.end - event.start)]
