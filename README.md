@@ -3,7 +3,7 @@ TimeLineChartView
 
 iOS UIView to show Timelines in a Chart
 
-![Alt text](/example.jpg?raw=true "TimeLineChartView")
+![Alt text](/example.png?raw=true "TimeLineChartView")
 
 # Usage
 
